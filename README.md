@@ -1,11 +1,11 @@
-# Messenger
+# Application
 
 Sample project based on
 ReactJS
 
 ## Table of contents
 
-- [Applicatio](#Applicatio)
+- [Application](#Application)
   - [Table of contents](#table-of-contents)
   - [Stack](#stack)
   - [Setup](#setup)
@@ -27,8 +27,8 @@ ReactJS
 Clone the repository to your filesystem
 
 ```
-$ git clone https://github.com/DJilanov/react-node-docker.git
-$ cd react-node-docker
+$ git clone https://github.com/DJilanov/React-N-Gram.git
+$ cd React-N-Gram
 ```
 
 ### Build and run

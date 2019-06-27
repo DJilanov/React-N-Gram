@@ -1,0 +1,32 @@
+{
+  "name": "react-node-messenger",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "lint": "./node_modules/eslint/bin/eslint.js . --fix",
+    "start": "node ./bin/www.js",
+    "debug": "node --inspect ./bin/www.js",
+    "test": "./node_modules/.bin/mocha --reporter spec"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "colors": "^1.2.4",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.4",
+    "dotenv": "^5.0.1",
+    "express": "~4.16.0",
+    "http-errors": "~1.6.2",
+    "morgan": "^1.9.0",
+    "mongoose": "^5.3.13",
+    "node-fetch": "2.2.0",
+    "uuid": "^3.3.2",
+    "validator": "^10.4.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.12.0",
+    "chai": "4.2.0",
+    "mocha": "5.2.0"
+  }
+}
