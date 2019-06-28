@@ -24,7 +24,7 @@ const init = async (repository) => {
   app.use(cookieParser());
 
   // Routers
-  require('./../../routes/messages/messages-router').attachTo(app, repository);
+  require('./../../routes/ngrams/ngrams-router').attachTo(app, repository);
 
   // Errors handlers
   // catch 404 and forward to error handler

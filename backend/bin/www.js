@@ -5,7 +5,8 @@ const config = require('./config');
 
 (async () => {
   try {
-    await require('./../data/db/db-context').init(config.database);
+    // Uncomment if we integrate some DB
+    // await require('./../data/db/db-context').init(config.database);
     const repository = await require('./../data/repository').init();
     const app = await require('./config/express').init(repository);
     const port = parseInt(config.api.port, 10);

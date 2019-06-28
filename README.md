@@ -67,4 +67,6 @@ Copyright (c) Dimitar Jilanov.
 Licensed under the [MIT](LICENSE) License.
 
 ## TODO:
-1. Write tests
+1. Write FE tests
+2. Finish BE tests
+3. Add all already calculated sentenses to DB so we dont do calculations when we can just fetch precalculated data ( can use bigQuerry )
