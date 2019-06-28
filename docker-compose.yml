@@ -13,13 +13,13 @@ services:
     ports:
       - "4200:80"
 
-  db:
-    image: mongo:3.4
-    restart: always
-    ports:
-      - "27017:27017"
-    volumes:
-      - "db_data:/data/db"
+  # db:
+  #   image: mongo:3.4
+  #   restart: always
+  #   ports:
+  #     - "27017:27017"
+  #   volumes:
+  #     - "db_data:/data/db"
 
 volumes:
   db_data:
