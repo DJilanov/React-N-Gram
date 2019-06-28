@@ -1,7 +1,7 @@
 import React from 'react'
 import FormContainer from '../containers/FormContainer'
 
-export default App = () => {
+export default () => {
   return (
     <div>
       <FormContainer />

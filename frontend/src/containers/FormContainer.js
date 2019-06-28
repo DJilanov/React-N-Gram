@@ -1,4 +1,6 @@
+import React from 'react'
 import { connect } from 'react-redux'
+import { getNgrams } from '../actions'
 import NgramsForm from '../components/NgramsForm'
 import NgramsTable from '../components/NgramsTable'
 
@@ -15,7 +17,4 @@ const mapDispatchToProps = (dispatch) => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)([
-  NgramsForm,
-  NgramsTable
-])
+)(() => <div>{NgramsForm}{NgramsTable}</div>)

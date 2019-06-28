@@ -1,40 +1,32 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const NgramsForm = ({ visible, addMessage, toggleAddForm }) => { 
+const NgramsForm = ({ getNgrams }) => {
   let input
 
-  const submitMessage = (event) => {
+  const submitForm = (event) => {
     event.preventDefault()
     if (!input.value.trim()) {
       return
     }
-    addMessage(input.value)
+    getNgrams(input.value)
     input.value = ''
   }
-  
+
   return (
     <div>
-      <button onClick={() => {
-        toggleAddForm()
-      }}>Add new message</button>
-      { visible ? 
-        <form onSubmit={e => submitMessage(e)}>
-          <textarea ref={node => input = node} />
-          <button type="submit">
-            Add Message
+      <form onSubmit={e => submitForm(e)}>
+        <textarea ref={node => input = node} />
+        <button type="submit">
+          Check N-grams
           </button>
-        </form>
-        : null
-      }
+      </form>
     </div>
   )
 }
 
 NgramsForm.propTypes = {
-  visible: PropTypes.bool.isRequired,
-  addMessage: PropTypes.func.isRequired,
-  toggleAddForm: PropTypes.func.isRequired
+  getNgrams: PropTypes.func.isRequired
 }
 
 export default NgramsForm
