@@ -11,6 +11,7 @@ ReactJS
   - [Setup](#setup)
     - [Clone the repository](#clone-the-repository)
     - [Build and run](#build-and-run)
+  - [API](#api)
   - [Contact](#contact)
   - [License](#license)
 
@@ -50,6 +51,10 @@ Stop containers
 ```
 $ docker-compose down
 ```
+
+## API
+
+The API documentation is available [here](API.md).
 
 ## Contact
 
