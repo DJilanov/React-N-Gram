@@ -65,3 +65,6 @@ The API documentation is available [here](API.md).
 Copyright (c) Dimitar Jilanov.
 
 Licensed under the [MIT](LICENSE) License.
+
+## TODO:
+1. Write tests
