@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Message from './Message'
 
-const MessageList = ({ messages, toggleEditMode, onSaveClick, deleteMessage }) => (
+const NgramsTable = ({ messages, toggleEditMode, onSaveClick, deleteMessage }) => (
   <ul>
     {messages.map(message =>
       <Message
@@ -16,7 +16,7 @@ const MessageList = ({ messages, toggleEditMode, onSaveClick, deleteMessage }) =
   </ul>
 )
 
-MessageList.propTypes = {
+NgramsTable.propTypes = {
   messages: PropTypes.arrayOf(PropTypes.shape({
     _id: PropTypes.string.isRequired,
     deleted: PropTypes.bool.isRequired,
@@ -28,4 +28,4 @@ MessageList.propTypes = {
   deleteMessage: PropTypes.func.isRequired
 }
 
-export default MessageList
+export default NgramsTable

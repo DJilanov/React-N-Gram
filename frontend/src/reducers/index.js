@@ -1,10 +1,6 @@
 import { combineReducers } from 'redux'
-import messages from './messages'
-import form from './form'
-import visibilityFilter from './visibilityFilter'
+import ngrams from './ngrams'
 
 export default combineReducers({
-  form,
-  messages,
-  visibilityFilter
+  ngrams
 })

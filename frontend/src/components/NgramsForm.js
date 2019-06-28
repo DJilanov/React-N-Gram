@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const MessageForm = ({ visible, addMessage, toggleAddForm }) => { 
+const NgramsForm = ({ visible, addMessage, toggleAddForm }) => { 
   let input
 
   const submitMessage = (event) => {
@@ -31,10 +31,10 @@ const MessageForm = ({ visible, addMessage, toggleAddForm }) => {
   )
 }
 
-MessageForm.propTypes = {
+NgramsForm.propTypes = {
   visible: PropTypes.bool.isRequired,
   addMessage: PropTypes.func.isRequired,
   toggleAddForm: PropTypes.func.isRequired
 }
 
-export default MessageForm
+export default NgramsForm

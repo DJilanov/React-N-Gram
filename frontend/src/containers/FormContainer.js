@@ -1,20 +1,21 @@
 import { connect } from 'react-redux'
-import { createMessage, toggleAddForm } from '../actions'
-import MessageForm from '../components/MessageForm'
+import NgramsForm from '../components/NgramsForm'
+import NgramsTable from '../components/NgramsTable'
 
 const mapStateToProps = state => {
   return {
-    visible: state.form.visible,
-    currentText: state.form.currentText
+    ngrams: state.ngrams
   };
 }
 
 const mapDispatchToProps = (dispatch) => ({
-  addMessage: (value) => dispatch(createMessage(value)),
-  toggleAddForm: () => dispatch(toggleAddForm()),
+  getNgrams: (text) => dispatch(getNgrams(text))
 })
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(MessageForm)
+)([
+  NgramsForm,
+  NgramsTable
+])
