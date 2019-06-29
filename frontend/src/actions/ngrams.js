@@ -8,7 +8,7 @@ export const getNgrams = (text) => {
       method: 'GET',
       type: 'FETCH_NGRAMS'
     })
-    return fetch(apiUrl + 'messages?text=' + text)
+    return fetch(apiUrl + 'ngrams?text=' + text)
       .then(response => response.json())
       .then(json => dispatch(setNgrams(json)))
   }

@@ -6,7 +6,7 @@ const attachTo = (app, repository) => {
   const ngramsController = require('./ngrams-controller')(repository);
 
   router
-    .get('/ngram', ngramsController.getNgrams)
+    .get('/ngrams', ngramsController.getNgrams)
 
   app.use('/api', router);
 };
