@@ -2,17 +2,24 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const NgramsTable = ({ ngrams }) => (
-  <ul>test
-    {/* {messages.map(message =>
-      <Message
-        key={message._id}
-        {...message}
-        toggleEditMode={() => toggleEditMode(message._id)}
-        onDeleteClick={() => deleteMessage(message._id, message.deleted)}
-        onSaveClick={(text) => onSaveClick(text, message)}
-      />
-    )} */}
-  </ul>
+  Object.entries(ngrams).length ?
+    <table>
+      <thead>
+        <tr>
+          <th>n-gram</th>
+          <th>count</th>
+        </tr>
+      </thead>
+      <tbody>
+        {Object.entries(ngrams).map(([key, value]) =>
+          <tr key={key}>
+            <td>{key}</td>
+            <td>{value}</td>
+          </tr>
+        )}
+      </tbody>
+    </table>
+  : null
 )
 
 NgramsTable.propTypes = {

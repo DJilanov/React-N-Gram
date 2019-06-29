@@ -17,9 +17,7 @@ const NgramsForm = ({ getNgrams }) => {
     <div>
       <form onSubmit={e => submitForm(e)}>
         <textarea ref={node => input = node} />
-        <button type="submit">
-          Check N-grams
-          </button>
+        <button type="submit">Check N-grams</button>
       </form>
     </div>
   )
