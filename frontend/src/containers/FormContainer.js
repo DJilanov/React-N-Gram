@@ -4,11 +4,11 @@ import { getNgrams } from '../actions'
 import NgramsForm from '../components/NgramsForm'
 import NgramsTable from '../components/NgramsTable'
 
-const FormContainer = () => {
+const FormContainer = ({ ngrams, getNgrams }) => {
   return (
     <div>
-      <NgramsForm />
-      <NgramsTable />
+      <NgramsForm getNgrams={getNgrams}/>
+      <NgramsTable ngrams={ngrams} />
     </div>
   )
 }

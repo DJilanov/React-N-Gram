@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const NgramsTable = ({ ngrams, getNgrams }) => (
+const NgramsTable = ({ ngrams }) => (
   <ul>test
     {/* {messages.map(message =>
       <Message
@@ -16,8 +16,7 @@ const NgramsTable = ({ ngrams, getNgrams }) => (
 )
 
 NgramsTable.propTypes = {
-  ngrams: PropTypes.object.isRequired,
-  getNgrams: PropTypes.func.isRequired
+  ngrams: PropTypes.object.isRequired
 }
 
 export default NgramsTable
