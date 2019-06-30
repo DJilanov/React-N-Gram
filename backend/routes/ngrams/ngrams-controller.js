@@ -1,12 +1,18 @@
 const ngramsController = (repository) => {
   const getNgrams = async (req, res) => {
-    if (req.query.text) {
-      res.status(200).send({
-        "He": 1,
-        "el": 1,
-        "ll": 1,
-        "lo": 1
-      });
+    let str = req.query.text;
+    if (str) {
+      let map = {};
+      let mod = str.length % n;
+      for (let i = 0; i < str.length - mod; i++) {
+        let ngram = str.substr(i, n);
+        if (map[ngram] === undefined) {
+          map[ngram] = 1;
+        } else {
+          map[ngram]++;
+        }
+      }
+      res.status(200).send(map);
     } else {
       res.status(400).send(
         {
