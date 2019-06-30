@@ -3,9 +3,9 @@ const ngramsController = (repository) => {
     let str = req.query.text;
     if (str) {
       let map = {};
-      let mod = str.length % n;
+      let mod = str.length % 2;
       for (let i = 0; i < str.length - mod; i++) {
-        let ngram = str.substr(i, n);
+        let ngram = str.substr(i, 2);
         if (map[ngram] === undefined) {
           map[ngram] = 1;
         } else {
